@@ -4,7 +4,7 @@
     package="com.example.e_learniverse_android">
 
     <application
-        android:name=".CustomApplication"
+        android:name=".custom_application.CustomApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -47,13 +47,17 @@
             android:name=".NotificationDetailsActivity"
             android:exported="false" />
 
-        <service android:name=".CustomFirebaseMessagingService"
+        <activity
+            android:name=".RegisterUserActivity"
+            android:exported="false" />
+
+        <service
+            android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

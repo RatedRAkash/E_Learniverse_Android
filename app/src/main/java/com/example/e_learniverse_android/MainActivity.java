@@ -1,21 +1,32 @@
 package com.example.e_learniverse_android;
 
 import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
+import com.example.e_learniverse_android.custom_application.CustomApplication;
+import com.example.e_learniverse_android.dto.RegisteredAndroidUser;
+import com.example.e_learniverse_android.retrofit.ApiServiceInterface;
+import com.example.e_learniverse_android.retrofit.RetrofitClient;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import androidx.core.app.NotificationCompat;
 
 import android.widget.Button;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonTriggerNotification, buttonCancel, buttonUpdate;
+    Button buttonTriggerNotification, buttonCancel, buttonUpdate, registerUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +36,14 @@ public class MainActivity extends AppCompatActivity {
         // Initialize Firebase Analytics
         FirebaseApp.initializeApp(this);
 
+        String token = FirebaseInstanceId.getInstance().getToken();
+
+        Log.d("FCM-Token", token);
+
         buttonTriggerNotification = (Button)findViewById(R.id.buttonTriggerNotification);
         buttonCancel = (Button)findViewById(R.id.buttonCancel);
         buttonUpdate = (Button)findViewById(R.id.buttonUpdate);
+        registerUser = (Button)findViewById(R.id.registerUser);
 
         buttonTriggerNotification.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +80,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        registerUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RegisterUserActivity.class));
+            }
+        });
 
     }
 }
