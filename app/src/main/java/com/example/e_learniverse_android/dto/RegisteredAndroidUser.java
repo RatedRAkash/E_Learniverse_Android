@@ -1,33 +1,50 @@
 package com.example.e_learniverse_android.dto;
+import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by AnantaAkashPodder on 8/6/2023.
  */
+
 public class RegisteredAndroidUser {
-
-    private String name;
+    @SerializedName("mobile")
     private String mobile;
-    private String fcm_token;
 
-    public RegisteredAndroidUser(String name, String mobile, String fcm_token) {
-        this.name = name;
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("fcm_token")
+    private String fcmToken;
+
+    public RegisteredAndroidUser(String mobile, String name, String fcmToken) {
         this.mobile = mobile;
-        this.fcm_token = fcm_token;
+        this.name = name;
+        this.fcmToken = fcmToken;
+    }
+
+    // Getters and setters
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getMobile() {
-        return mobile;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFcm_token() {
-        return fcm_token;
+    public String getFcmToken() {
+        return fcmToken;
     }
 
-    public void setFcm_token(String fcm_token) {
-        this.fcm_token = fcm_token;
+    public void setFcmToken(String fcmToken) {
+        this.fcmToken = fcmToken;
     }
 }
+
