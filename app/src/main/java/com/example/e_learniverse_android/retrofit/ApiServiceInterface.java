@@ -10,6 +10,6 @@ import retrofit2.http.POST;
  * Created by AnantaAkashPodder on 8/6/2023.
  */
 public interface ApiServiceInterface {
-    @POST("endpoint")
+    @POST("api/notification/register-android-user")
     Call<RegisteredAndroidUser> registerUserToBackend(@Body RegisteredAndroidUser request);
 }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <!-- Add any necessary certificates or trusted authorities here -->
+        </trust-anchors>
+    </base-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">192.168.0.172</domain>
+        <!-- Add any other necessary domains or IP addresses here -->
+    </domain-config>
+</network-security-config>
