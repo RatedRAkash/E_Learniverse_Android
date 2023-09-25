@@ -66,6 +66,4 @@ public class CustomApplication extends Application {
         myAppsNotificationManager.cancelNotification(notificaitonId);
     }
 
-
-
 }

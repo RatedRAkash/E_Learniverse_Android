@@ -10,9 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.e_learniverse_android.custom_application.CustomApplication;
-import com.example.e_learniverse_android.dto.RegisteredAndroidUser;
-import com.example.e_learniverse_android.retrofit.ApiServiceInterface;
-import com.example.e_learniverse_android.retrofit.RetrofitClient;
+import com.example.e_learniverse_android.livedata_tutorial.LiveDataTutorialActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -20,13 +18,9 @@ import androidx.core.app.NotificationCompat;
 
 import android.widget.Button;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonTriggerNotification, buttonCancel, buttonUpdate, registerUser;
+    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +29,20 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize Firebase Analytics
         FirebaseApp.initializeApp(this);
+        try{
+            String token = FirebaseInstanceId.getInstance().getToken();
 
-        String token = FirebaseInstanceId.getInstance().getToken();
-
-        Log.d("FCM-Token", token);
+            Log.d("FCM-Token: ", token);
+        }
+        catch (Exception e){
+            Log.d("FCM-Token Not Found: ", e.toString());
+        }
 
         buttonTriggerNotification = (Button)findViewById(R.id.buttonTriggerNotification);
         buttonCancel = (Button)findViewById(R.id.buttonCancel);
         buttonUpdate = (Button)findViewById(R.id.buttonUpdate);
-        registerUser = (Button)findViewById(R.id.registerUser);
+        buttonRegisterUser = (Button)findViewById(R.id.registerUser);
+        buttonTutorialLiveData = (Button)findViewById(R.id.tutorialLiveData);
 
         buttonTriggerNotification.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        registerUser.setOnClickListener(new View.OnClickListener() {
+        buttonRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RegisterUserActivity.class));
