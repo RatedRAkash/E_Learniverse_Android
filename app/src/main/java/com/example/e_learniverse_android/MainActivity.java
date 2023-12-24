@@ -20,7 +20,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData;
+    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         buttonUpdate = (Button)findViewById(R.id.buttonUpdate);
         buttonRegisterUser = (Button)findViewById(R.id.registerUser);
         buttonTutorialLiveData = (Button)findViewById(R.id.tutorialLiveData);
+        buttonCallAuthorApi = (Button)findViewById(R.id.callAuthorApi);
 
         buttonTriggerNotification.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +91,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, LiveDataTutorialActivity.class));
+            }
+        });
+
+        buttonCallAuthorApi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AuthorActivity.class));
             }
         });
 
