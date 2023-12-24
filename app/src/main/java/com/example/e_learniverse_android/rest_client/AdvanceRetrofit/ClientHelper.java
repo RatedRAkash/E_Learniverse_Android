@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.AdvanceRestClient;
+package com.example.e_learniverse_android.rest_client.AdvanceRetrofit;
 
 import java.util.concurrent.TimeUnit;
 

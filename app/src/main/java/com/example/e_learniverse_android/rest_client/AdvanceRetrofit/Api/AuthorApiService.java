@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.AdvanceRestClient.Api;
+package com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api;
 
 import com.example.e_learniverse_android.dto.AuthorResponseDto;
 

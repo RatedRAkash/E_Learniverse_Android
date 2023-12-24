@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.retrofit;
+package com.example.e_learniverse_android.rest_client.SimpleRetrofit;
 
 import com.example.e_learniverse_android.dto.RegisteredAndroidUser;
 

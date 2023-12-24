@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.retrofit;
+package com.example.e_learniverse_android.rest_client.SimpleRetrofit;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

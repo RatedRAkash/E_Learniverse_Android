@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.AdvanceRestClient;
+package com.example.e_learniverse_android.rest_client.AdvanceRetrofit;
 
 import android.os.Build;
 
@@ -52,5 +52,14 @@ public class RMARestClient<TService, TDto> {
                                     .execute();
 
         return response.body();
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public Call<TDto> callApiAsync(Class<TService> tServiceClass, Function<TService, Call<TDto>> actionFunctionalInterface) throws Exception {
+
+        TService tServiceClassObj = ClientHelper.buildRetrofitClient(tServiceClass, baseUrl, DEFAULT_TIMEOUT,
+                interceptorsList.toArray(new Interceptor[0]));
+
+        return actionFunctionalInterface.apply(tServiceClassObj);
     }
 }

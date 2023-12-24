@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.e_learniverse_android.dto.RegisteredAndroidUser;
-import com.example.e_learniverse_android.retrofit.ApiServiceInterface;
-import com.example.e_learniverse_android.retrofit.RetrofitClient;
 import com.google.firebase.iid.FirebaseInstanceId;
+import com.example.e_learniverse_android.rest_client.SimpleRetrofit.RetrofitClient;
+import com.example.e_learniverse_android.rest_client.SimpleRetrofit.ApiServiceInterface;
 
 import retrofit2.Call;
 import retrofit2.Callback;
