@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import com.example.e_learniverse_android.authorThirdPartyApiCall.AuthorActivity;
 import com.example.e_learniverse_android.custom_application.CustomApplication;
 import com.example.e_learniverse_android.livedata_tutorial.LiveDataTutorialActivity;
 import com.google.firebase.FirebaseApp;

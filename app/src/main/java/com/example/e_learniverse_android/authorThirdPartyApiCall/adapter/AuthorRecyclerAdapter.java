@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.adapter;
+package com.example.e_learniverse_android.authorThirdPartyApiCall.adapter;
 
 /**
  * Created by AnantaAkashPodder on 24/12/2023.
@@ -23,23 +23,23 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyViewHolder> implements Filterable {
+public class AuthorRecyclerAdapter extends RecyclerView.Adapter<AuthorRecyclerAdapter.MyViewHolder> implements Filterable {
 
-    private static final String TAG = "RecyclerAdapter";
+    private static final String TAG = "AuthorRecyclerAdapter";
     int count = 0;
 
     //Class er instanceVariables BEGIN
     public List<AuthorResponseDto> authorList;
     List<AuthorResponseDto> authorsListAll; //Filter kora chara Movie er list
-    private RecyclerViewClickInterface recyclerViewClickInterface;
+    private AuthorRecyclerViewClickInterface authorRecyclerViewClickInterface;
     //Class er instanceVariables END
 
 
-    public RecyclerAdapter(List<AuthorResponseDto> authorList, RecyclerViewClickInterface recyclerViewClickInterface) {
+    public AuthorRecyclerAdapter(List<AuthorResponseDto> authorList, AuthorRecyclerViewClickInterface authorRecyclerViewClickInterface) {
         this.authorList = authorList;
         this.authorsListAll = new ArrayList<>(authorList); //"new" operator nah diya emni this.moviesListAll=moviesList dile... khali REFERENCE pass huito fole... moviesList change korle pore moviesListAll oo change hoya jabe... tai NEW operator use kore amra complete NEW Object create korlam
         System.out.println(authorsListAll);
-        this.recyclerViewClickInterface = recyclerViewClickInterface;
+        this.authorRecyclerViewClickInterface = authorRecyclerViewClickInterface;
     }
 
     @NonNull
@@ -133,7 +133,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    recyclerViewClickInterface.onItemClick(getAdapterPosition());
+                    authorRecyclerViewClickInterface.onItemClick(getAdapterPosition());
                 }
             });
 
@@ -144,7 +144,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
 
 //                    moviesList.remove(getAdapterPosition()); // Amader created LIST theke Movie ta delete korlam
 //                    notifyItemRemoved(getAdapterPosition()); //Eita mane holo Recycler View er theke ROW ta delete kore dilam
-                    recyclerViewClickInterface.onLongItemClick(getAdapterPosition());
+                    authorRecyclerViewClickInterface.onLongItemClick(getAdapterPosition());
 
                     return true; //Item ta nidristio POSITION ee tai "True" return kortase
                 }

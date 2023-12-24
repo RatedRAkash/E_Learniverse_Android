@@ -6,12 +6,16 @@ import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.MediatorLiveData;
 
 public class CounterViewModel extends ViewModel {
+//    ViewModel ke Consumer dhoro... ViewModel er LiveData ke Activity rah "Subscribe" or "Observe" kore... jate kore ViewModel er Livedata er Value change hole Activity taar moto kaaj korte pare
 //    *************************************************************************************
     //    Normal LiveData ---> we can Only Get & Observe Data... amra "Set" korte parbo Nah
     //    MutableLiveData ---> eita amra use kori jate kore Data "Set" korte pari
     //    MediatorLiveData ---> TWO or More MutableLiveData ke Observe korar jonno
 //    *************************************************************************************
 
+//  TODO:
+//   setValue() ---> Sets the value. If there are active observers, the value will be dispatched to them. This method must be called from the main thread.
+//   postValue() ---> Posts a task to a main thread to set the given value. If you called this method multiple times before a main thread executed a posted task, only the last value would be dispatched.
 
     // MutableLiveData for counter1 and counter2
     private MutableLiveData<Integer> counter1LiveData;
