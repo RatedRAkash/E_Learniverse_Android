@@ -51,6 +51,9 @@ dependencies {
 //    connecting to Firebase Dependency
     implementation 'com.google.firebase:firebase-analytics:20.0.0' // Replace with the desired Firebase libraries
     implementation 'com.google.firebase:firebase-messaging:20.1.0' // FCM dependency
+
+//    Converting "Lists" dependency
+    implementation 'com.google.guava:guava:29.0-jre'
 }
 
 apply plugin: 'com.google.gms.google-services'
