@@ -1,11 +1,10 @@
-package com.example.e_learniverse_android.livedata_tutorial;
+package com.example.e_learniverse_android.livedata_tutorial.numberCounter.viewmodel;
 
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import androidx.lifecycle.MediatorLiveData;
-
-public class CounterViewModel extends ViewModel {
+public class NumberCounterViewModel extends ViewModel {
 //    ViewModel ke Consumer dhoro... ViewModel er LiveData ke Activity rah "Subscribe" or "Observe" kore... jate kore ViewModel er Livedata er Value change hole Activity taar moto kaaj korte pare
 //    *************************************************************************************
     //    Normal LiveData ---> we can Only Get & Observe Data... amra "Set" korte parbo Nah

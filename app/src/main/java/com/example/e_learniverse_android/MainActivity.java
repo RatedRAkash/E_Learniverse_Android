@@ -11,7 +11,8 @@ import android.view.View;
 
 import com.example.e_learniverse_android.authorThirdPartyApiCall.AuthorActivity;
 import com.example.e_learniverse_android.custom_application.CustomApplication;
-import com.example.e_learniverse_android.livedata_tutorial.LiveDataTutorialActivity;
+import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
+import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -21,7 +22,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi;
+    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         buttonRegisterUser = (Button)findViewById(R.id.registerUser);
         buttonTutorialLiveData = (Button)findViewById(R.id.tutorialLiveData);
         buttonCallAuthorApi = (Button)findViewById(R.id.callAuthorApi);
+        buttonCountDownTimer = (Button)findViewById(R.id.countDownTimer);
 
         buttonTriggerNotification.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AuthorActivity.class));
+            }
+        });
+
+        buttonCountDownTimer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CountDownTimerActivity.class));
             }
         });
 
