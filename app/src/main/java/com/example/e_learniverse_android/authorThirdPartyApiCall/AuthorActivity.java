@@ -56,6 +56,13 @@ public class AuthorActivity extends AppCompatActivity implements AuthorRecyclerV
             loadAllList(responseDto);
         });
 
+        authorViewModel.getErrorString().observe(this, responseDto -> {
+            if(responseDto!=null || responseDto!=""){
+                Toast.makeText(getApplicationContext(), responseDto, Toast.LENGTH_LONG).show();
+            }
+
+        });
+
 //        try {
 //            Call<List<AuthorResponseDto>> call = new RMARestClient<AuthorApiService, List<AuthorResponseDto>>()
 //                    .setBaseUrl("http://192.168.0.125:8080")

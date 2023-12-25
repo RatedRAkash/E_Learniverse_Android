@@ -8,6 +8,8 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.e_learniverse_android.dto.AuthorResponseDto;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api.AuthorApiService;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.RMARestClient;
+import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.error.ApiError;
+import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.error.ErrorUtils;
 
 import java.util.List;
 
@@ -22,6 +24,7 @@ public class AuthorRepository {
 
     public static AuthorRepository authorRepository;
     private final MutableLiveData<List<AuthorResponseDto>> listOfAuthors = new MutableLiveData<>();
+    private final MutableLiveData<String> errorStringMutableLivedata = new MutableLiveData<>();
 
     public static AuthorRepository getInstance(){
         if(authorRepository==null){
@@ -44,12 +47,48 @@ public class AuthorRepository {
             call.enqueue(new Callback<List<AuthorResponseDto>>() {
                 @Override
                 public void onResponse(Call<List<AuthorResponseDto>> call, Response<List<AuthorResponseDto>> response) {
-                    listOfAuthors.setValue(response.body());
+                    if(response.isSuccessful()){
+                        listOfAuthors.setValue(response.body());
+                    }
+                    else{
+                        //TODO Method-1: eivabe korte pari
+
+                        /*
+                        switch (response.code()){
+                            case 404:
+                                errorStringMutableLivedata.postValue("Server returned error: Author Not Found");
+                                break;
+                            case 500:
+                                errorStringMutableLivedata.postValue("Server returned error: Server is Broker");
+                                break;
+                            default:
+                                errorStringMutableLivedata.postValue("Server returned error: unknown error");
+                                break;
+                        }
+                        */
+
+
+                         /*
+                        //TODO Method-2: direct response.errorBody() eivabe Access korte paro
+                        try{
+                            errorStringMutableLivedata.postValue("Server returned error: " + response.errorBody().toString());
+                        }catch (Exception exc){
+                            errorStringMutableLivedata.postValue("Server returned error: unknown error");
+                        }
+                        */
+
+
+                        //TODO Method-3: ErrorUtil banaiye korbo
+                        ApiError apiError = ErrorUtils.parseErrorFromResponse(response);
+                        errorStringMutableLivedata.postValue("StatusCode: "+ apiError.getStatusCode() + "& Message: "+apiError.getMessage());
+                    }
+
                 }
 
                 @Override
                 public void onFailure(Call<List<AuthorResponseDto>> call, Throwable t) {
                     listOfAuthors.postValue(null);
+                    errorStringMutableLivedata.postValue("Network Error!!! Connect to internet");
                 }
             });
 
@@ -57,5 +96,9 @@ public class AuthorRepository {
             e.printStackTrace();
         }
         return listOfAuthors;
+    }
+
+    public MutableLiveData<String> getErrorString(){
+        return errorStringMutableLivedata;
     }
 }

@@ -60,6 +60,13 @@ dependencies {
 
 //    Converting "Lists" dependency
     implementation 'com.google.guava:guava:29.0-jre'
+
+//  gson
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+//  Jackson for Json Properties
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.8'
+
 }
 
 apply plugin: 'com.google.gms.google-services'

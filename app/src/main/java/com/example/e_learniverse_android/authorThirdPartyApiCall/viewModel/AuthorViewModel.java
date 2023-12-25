@@ -31,4 +31,8 @@ public class AuthorViewModel extends AndroidViewModel {
     public MutableLiveData<List<AuthorResponseDto>> getListOfAuthors(){{
         return authorRepository.getListOfAuthors();
     }}
+
+    public MutableLiveData<String> getErrorString(){{
+        return authorRepository.getErrorString();
+    }}
 }

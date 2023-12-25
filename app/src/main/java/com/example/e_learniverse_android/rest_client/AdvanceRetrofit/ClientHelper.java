@@ -11,10 +11,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by AnantaAkashPodder on 24/12/2023.
  */
 public class ClientHelper {
+    public static Retrofit retrofit;
+
+
+    //ApiError er jonno "responseBodyConverter" ei Method lagbe... jeita Retrofit class er Object ee ase
+    public static Retrofit getRetrofitInstance(){
+        if(retrofit!=null){
+            return retrofit;
+        }else{
+            return null;
+        }
+    }
 
     public static <T> T buildRetrofitClient(Class<T> tClass, String baseUrl, int timeout, Interceptor... interceptors){
-        Retrofit retrofit = buildRetrofit(baseUrl, timeout, interceptors);
-
+        retrofit = buildRetrofit(baseUrl, timeout, interceptors);
         // jei "Class" pathano huise... shei Class er against ee Retrofit Client Create kore, shei Class ta kei Return kore dilam, jate kore oi CLASS er Endpoint Method gula Call korte pari
         return retrofit.create(tClass);
     }

@@ -30,6 +30,7 @@ public class RMARestClient<TService, TDto> {
     public RMARestClient(){
         this(null);
     }
+
     // *********** Methods ***********
     public RMARestClient<TService, TDto> setBaseUrl(String baseUrl){ // return kortesei ei CLASS er ei ekta OBJECT, jeno shei Object ke pore Manipulate kore arro ei CLASS er Other Methods call korte pari
         this.baseUrl = baseUrl;
