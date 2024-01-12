@@ -51,18 +51,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".RegisterUserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".notification.new_tutorial.NewNotificationTutorialActivity"
             android:exported="false" />
         <activity
             android:name=".notification.old_tutorial.OldNotificationTutorialActivity"
             android:exported="false" />
         <activity
             android:name=".notification.old_tutorial.NotificationDetailsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".notification.new_tutorial.NewNotificationTutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.new_tutorial.CustomNotificationTutorialActivity"
             android:exported="false" />
 
         <service

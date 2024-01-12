@@ -6,13 +6,13 @@ import androidx.core.content.res.ResourcesCompat;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.e_learniverse_android.R;
 
@@ -20,8 +20,7 @@ public class NewNotificationTutorialActivity extends AppCompatActivity {
 
     private static final String CHANNEL_ID = "RMA Channel";
     private static final int NOTIFICATION_ID = 14;
-    private Button btnCreateNotification;
-    private TextView tvNotificationId;
+    private Button btnCreateNotification, btnGoToCustomNotificationActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +28,8 @@ public class NewNotificationTutorialActivity extends AppCompatActivity {
         setContentView(R.layout.activity_new_notification_tutorial);
 
         btnCreateNotification = (Button)findViewById(R.id.btnCreateNotificationId);
-        tvNotificationId = (TextView)findViewById(R.id.tvNotificationId);
+        btnGoToCustomNotificationActivity = (Button)findViewById(R.id.btnGoToCustomNotificationActivity);
+
 
         Drawable noti_large_drawable = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_icon_large, null);
         BitmapDrawable notiLargeBitmapDrawable = (BitmapDrawable) noti_large_drawable;
@@ -50,7 +50,9 @@ public class NewNotificationTutorialActivity extends AppCompatActivity {
                     .build();
 
             notificationManager.createNotificationChannel(new NotificationChannel(CHANNEL_ID, "RMA New Channel", NotificationManager.IMPORTANCE_HIGH));
-        } else {
+        }
+
+        else {
             rmaNotification = new Notification.Builder(this)
                     .setLargeIcon(notiLargeBitmap)
                     .setSmallIcon(R.drawable.ic_e_learniverse)
@@ -65,7 +67,13 @@ public class NewNotificationTutorialActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 notificationManager.notify(NOTIFICATION_ID, rmaNotification);
-                tvNotificationId.setText("Notified Notification");
+            }
+        });
+
+        btnGoToCustomNotificationActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(NewNotificationTutorialActivity.this, CustomNotificationTutorialActivity.class));
             }
         });
     }

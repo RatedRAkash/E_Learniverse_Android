@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".notification.new_tutorial.NewNotificationTutorialActivity">
+    tools:context=".notification.new_tutorial.CustomNotificationTutorialActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,17 +13,16 @@
         android:gravity="center_vertical">
 
         <Button
-            android:id="@+id/btnCreateNotificationId"
+            android:id="@+id/btnBigPictureStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create Notification" />
+            android:text="Big Picture Style Notification" />
 
         <Button
-            android:id="@+id/btnGoToCustomNotificationActivity"
+            android:id="@+id/btnInboxStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Go to Custom Notification Activity"
-            android:backgroundTint="@color/colorAccent"/>
+            android:text="Inbox Style Notification" />
 
     </LinearLayout>
 
