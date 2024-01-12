@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.authorThirdPartyApiCall.viewModel;
+package com.example.e_learniverse_android.author_third_party_api.viewModel;
 
 import android.app.Application;
 import android.os.Build;
@@ -8,10 +8,8 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.e_learniverse_android.authorThirdPartyApiCall.repository.AuthorRepository;
-import com.example.e_learniverse_android.dto.AuthorResponseDto;
-
-import org.checkerframework.checker.units.qual.A;
+import com.example.e_learniverse_android.author_third_party_api.repository.AuthorRepository;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
 
 import java.util.List;
 

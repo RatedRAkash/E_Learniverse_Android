@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.authorThirdPartyApiCall;
+package com.example.e_learniverse_android.author_third_party_api;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,20 +11,13 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.example.e_learniverse_android.R;
-import com.example.e_learniverse_android.authorThirdPartyApiCall.adapter.AuthorRecyclerAdapter;
-import com.example.e_learniverse_android.authorThirdPartyApiCall.adapter.AuthorRecyclerViewClickInterface;
-import com.example.e_learniverse_android.authorThirdPartyApiCall.viewModel.AuthorViewModel;
-import com.example.e_learniverse_android.dto.AuthorResponseDto;
-
-import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.RMARestClient;
-import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api.AuthorApiService;
+import com.example.e_learniverse_android.author_third_party_api.adapter.AuthorRecyclerAdapter;
+import com.example.e_learniverse_android.author_third_party_api.adapter.AuthorRecyclerViewClickInterface;
+import com.example.e_learniverse_android.author_third_party_api.viewModel.AuthorViewModel;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class AuthorActivity extends AppCompatActivity implements AuthorRecyclerViewClickInterface {

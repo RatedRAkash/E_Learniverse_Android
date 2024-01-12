@@ -19,7 +19,7 @@
             android:name=".livedata_tutorial.countDownTimer.CountDownTimerActivity"
             android:exported="false" />
         <activity
-            android:name=".authorThirdPartyApiCall.AuthorActivity"
+            android:name=".author_third_party_api.AuthorActivity"
             android:exported="false" />
         <activity
             android:name=".livedata_tutorial.numberCounter.LiveDataTutorialActivity"
@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".RegisterUserActivity"
+            android:name=".register_user_to_my_backend.RegisterUserActivity"
             android:exported="false" />
         <activity
             android:name=".notification.old_tutorial.OldNotificationTutorialActivity"
@@ -71,6 +71,11 @@
             android:name=".background_service.MediaPlayerBackgroundActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".broadcast_receiver.AlarmManagerActivity"
+            android:exported="false" />
+
+
         <!--  FirebaseFCM Service    -->
         <service
             android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
@@ -83,6 +88,8 @@
         <!--  Music Service    -->
         <service android:name=".background_service.service.MusicService"/>
 
+        <!--  BroadcastReceiver   -->
+        <receiver android:name=".broadcast_receiver.MyBroadcastReceiver"/>
 
     </application>
 

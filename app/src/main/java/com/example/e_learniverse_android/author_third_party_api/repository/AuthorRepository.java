@@ -1,11 +1,11 @@
-package com.example.e_learniverse_android.authorThirdPartyApiCall.repository;
+package com.example.e_learniverse_android.author_third_party_api.repository;
 
 import android.os.Build;
 
 import androidx.annotation.RequiresApi;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.e_learniverse_android.dto.AuthorResponseDto;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api.AuthorApiService;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.RMARestClient;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.error.ApiError;

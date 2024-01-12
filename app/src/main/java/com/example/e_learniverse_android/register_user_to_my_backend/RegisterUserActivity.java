@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android;
+package com.example.e_learniverse_android.register_user_to_my_backend;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.e_learniverse_android.dto.RegisteredAndroidUser;
+import com.example.e_learniverse_android.R;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.RegisteredAndroidUser;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.example.e_learniverse_android.rest_client.SimpleRetrofit.RetrofitClient;
 import com.example.e_learniverse_android.rest_client.SimpleRetrofit.ApiServiceInterface;

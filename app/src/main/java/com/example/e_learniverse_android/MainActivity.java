@@ -8,12 +8,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
-import com.example.e_learniverse_android.authorThirdPartyApiCall.AuthorActivity;
+import com.example.e_learniverse_android.author_third_party_api.AuthorActivity;
 import com.example.e_learniverse_android.background_service.MediaPlayerBackgroundActivity;
+import com.example.e_learniverse_android.broadcast_receiver.AlarmManagerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;
 import com.example.e_learniverse_android.notification.old_tutorial.OldNotificationTutorialActivity;
+import com.example.e_learniverse_android.register_user_to_my_backend.RegisterUserActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
 
@@ -21,7 +23,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService;
+    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService, buttonBroadcastReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         buttonCallAuthorApi = (Button)findViewById(R.id.callAuthorApi);
         buttonCountDownTimer = (Button)findViewById(R.id.countDownTimer);
         buttonMusicService = (Button)findViewById(R.id.btnMusicService);
+        buttonBroadcastReceiver = (Button)findViewById(R.id.btnBroadcastReceiver);
 
         buttonOldNotificationTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,6 +99,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonBroadcastReceiver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, AlarmManagerActivity.class));
+            }
+        });
     }
 }
 

@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.authorThirdPartyApiCall.adapter;
+package com.example.e_learniverse_android.author_third_party_api.adapter;
 
 /**
  * Created by AnantaAkashPodder on 24/12/2023.
@@ -17,7 +17,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.e_learniverse_android.R;
-import com.example.e_learniverse_android.dto.AuthorResponseDto;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -61,6 +61,12 @@
             android:text="Go To Music Service"
             android:layout_margin="11dp"/>
 
+        <Button
+            android:id="@+id/btnBroadcastReceiver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To AlarmManager/Broadcast Receiver"
+            android:layout_margin="11dp"/>
 
     </LinearLayout>
 

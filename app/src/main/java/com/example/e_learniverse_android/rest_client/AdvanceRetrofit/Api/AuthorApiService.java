@@ -1,6 +1,6 @@
 package com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api;
 
-import com.example.e_learniverse_android.dto.AuthorResponseDto;
+import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
 
 import java.util.List;
 
