@@ -51,8 +51,17 @@
             android:id="@+id/countDownTimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="countDownTimer"
+            android:text="Count-Down Timer"
             android:layout_margin="11dp"/>
+
+        <Button
+            android:id="@+id/btnMusicService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Go To Music Service"
+            android:layout_margin="11dp"/>
+
+
     </LinearLayout>
 
 </LinearLayout>

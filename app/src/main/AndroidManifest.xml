@@ -60,7 +60,6 @@
         <activity
             android:name=".notification.old_tutorial.NotificationDetailsActivity"
             android:exported="false" />
-
         <activity
             android:name=".notification.new_tutorial.NewNotificationTutorialActivity"
             android:exported="false" />
@@ -68,6 +67,11 @@
             android:name=".notification.new_tutorial.CustomNotificationTutorialActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".background_service.MediaPlayerBackgroundActivity"
+            android:exported="false" />
+
+        <!--  FirebaseFCM Service    -->
         <service
             android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
             android:exported="false">
@@ -75,6 +79,11 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <!--  Music Service    -->
+        <service android:name=".background_service.service.MusicService"/>
+
+
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.e_learniverse_android.authorThirdPartyApiCall.AuthorActivity;
+import com.example.e_learniverse_android.background_service.MediaPlayerBackgroundActivity;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;
@@ -20,7 +21,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer;
+    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTutorialLiveData = (Button)findViewById(R.id.tutorialLiveData);
         buttonCallAuthorApi = (Button)findViewById(R.id.callAuthorApi);
         buttonCountDownTimer = (Button)findViewById(R.id.countDownTimer);
+        buttonMusicService = (Button)findViewById(R.id.btnMusicService);
 
         buttonOldNotificationTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,6 +86,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, NewNotificationTutorialActivity.class));
+            }
+        });
+
+        buttonMusicService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MediaPlayerBackgroundActivity.class));
             }
         });
 
