@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.e_learniverse_android">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
     <application
         android:name=".custom_application.CustomApplication"
         android:allowBackup="true"
@@ -51,6 +56,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".register_user_to_my_backend.RegisterUserActivity"
             android:exported="false" />
@@ -72,7 +78,7 @@
             android:exported="false" />
 
         <activity
-            android:name=".broadcast_receiver.AlarmManagerActivity"
+            android:name=".broadcast_receiver.alarm_manager.AlarmManagerActivity"
             android:exported="false" />
 
 
@@ -88,8 +94,19 @@
         <!--  Music Service    -->
         <service android:name=".background_service.service.MusicService"/>
 
-        <!--  BroadcastReceiver   -->
-        <receiver android:name=".broadcast_receiver.MyBroadcastReceiver"/>
+        <!-- Alarm Manager BroadcastReceiver   -->
+        <receiver android:name=".broadcast_receiver.alarm_manager.MyBroadcastReceiver"/>
+
+        <!-- SMS BroadcastReceiver   -->
+        <receiver android:name=".broadcast_receiver.universal_broadcast_receiver.SmsBroadcastReceiver"
+            android:permission="android.permission.BROADCAST_SMS"
+            android:exported="true">  <!--true : broadcast receiver can receive events sent by same or others applications-->
+
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+            </intent-filter>
+
+        </receiver>
 
     </application>
 

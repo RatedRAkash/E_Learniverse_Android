@@ -110,7 +110,7 @@ public class CustomNotificationTutorialActivity extends AppCompatActivity {
                     .setStyle(style)
                     .build();
 
-            notificationManager.createNotificationChannel(new NotificationChannel(CHANNEL_ID, "RMA New Channel", NotificationManager.IMPORTANCE_HIGH));
+            notificationManager.createNotificationChannel(new NotificationChannel(CHANNEL_ID, "Sergio Ramos New Channel", NotificationManager.IMPORTANCE_HIGH));
         }
 
         else {

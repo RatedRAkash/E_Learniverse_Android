@@ -10,7 +10,7 @@ import android.view.View;
 
 import com.example.e_learniverse_android.author_third_party_api.AuthorActivity;
 import com.example.e_learniverse_android.background_service.MediaPlayerBackgroundActivity;
-import com.example.e_learniverse_android.broadcast_receiver.AlarmManagerActivity;
+import com.example.e_learniverse_android.broadcast_receiver.alarm_manager.AlarmManagerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;

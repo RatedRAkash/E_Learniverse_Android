@@ -6,7 +6,7 @@ import androidx.annotation.RequiresApi;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.e_learniverse_android.register_user_to_my_backend.dto.AuthorResponseDto;
-import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.Api.AuthorApiService;
+import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.api_endpoint.AuthorApiService;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.RMARestClient;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.error.ApiError;
 import com.example.e_learniverse_android.rest_client.AdvanceRetrofit.error.ErrorUtils;

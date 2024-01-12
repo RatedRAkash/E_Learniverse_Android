@@ -1,4 +1,4 @@
-package com.example.e_learniverse_android.broadcast_receiver;
+package com.example.e_learniverse_android.broadcast_receiver.alarm_manager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
