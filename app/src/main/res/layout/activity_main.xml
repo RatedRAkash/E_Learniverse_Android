@@ -1,146 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<!--    <com.google.android.material.appbar.AppBarLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:theme="@style/Theme.E_Learniverse_Android.AppBarOverlay">-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/fab_margin"
+        android:orientation="vertical">
 
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:id="@+id/toolbar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="?attr/actionBarSize"-->
-<!--            android:background="?attr/colorPrimary"-->
-<!--            app:popupTheme="@style/Theme.E_Learniverse_Android.PopupOverlay" />-->
+        <Button
+            android:id="@+id/oldNotificationTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Old Notification Tutorial"
+            android:layout_margin="11dp"/>
 
-<!--    </com.google.android.material.appbar.AppBarLayout>-->
+        <Button
+            android:id="@+id/newNotificationTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Notification Tutorial"
+            android:layout_margin="11dp"/>
 
-<!--    <include layout="@layout/content_main" />-->
+        <Button
+            android:id="@+id/registerUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register User"
+            android:layout_margin="11dp"/>
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_marginEnd="@dimen/fab_margin"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+        <Button
+            android:id="@+id/tutorialLiveData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LiveData Tutorial"
+            android:layout_margin="11dp"/>
 
-    <Button
-        android:id="@+id/buttonTriggerNotification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trigger Notification"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.143" />
+        <Button
+            android:id="@+id/callAuthorApi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Call Author Api"
+            android:layout_margin="11dp"/>
 
-    <Button
-        android:id="@+id/buttonCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Cancel Notification"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonTriggerNotification"
-        app:layout_constraintVertical_bias="0.097" />
+        <Button
+            android:id="@+id/countDownTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="countDownTimer"
+            android:layout_margin="11dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="8dp"
-        android:text="Update Notification"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonCancel"
-        app:layout_constraintVertical_bias="0.0" />
+</LinearLayout>
 
-    <Button
-        android:id="@+id/registerUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Register User"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonUpdate"
-        app:layout_constraintVertical_bias="0.097" />
 
-    <Button
-        android:id="@+id/tutorialLiveData"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="LiveData Tutorial"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerUser"
-        app:layout_constraintVertical_bias="0.097" />
+    <!--    <com.google.android.material.appbar.AppBarLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:theme="@style/Theme.E_Learniverse_Android.AppBarOverlay">-->
 
-    <Button
-        android:id="@+id/callAuthorApi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="Call Author Api"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tutorialLiveData"
-        app:layout_constraintVertical_bias="0.097" />
+    <!--        <androidx.appcompat.widget.Toolbar-->
+    <!--            android:id="@+id/toolbar"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="?attr/actionBarSize"-->
+    <!--            android:background="?attr/colorPrimary"-->
+    <!--            app:popupTheme="@style/Theme.E_Learniverse_Android.PopupOverlay" />-->
 
-    <Button
-        android:id="@+id/countDownTimer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="countDownTimer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/callAuthorApi"
-        app:layout_constraintVertical_bias="0.097" />
+    <!--    </com.google.android.material.appbar.AppBarLayout>-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--    <include layout="@layout/content_main" />-->
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fab"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        android:layout_marginEnd="@dimen/fab_margin"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->

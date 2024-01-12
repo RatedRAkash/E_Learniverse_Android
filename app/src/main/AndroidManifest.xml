@@ -44,19 +44,25 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.E_Learniverse_Android.NoActionBar">
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".NotificationDetailsActivity"
-            android:exported="false" />
+
         <activity
             android:name=".RegisterUserActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.new_tutorial.NewNotificationTutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.old_tutorial.OldNotificationTutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".notification.old_tutorial.NotificationDetailsActivity"
             android:exported="false" />
 
         <service

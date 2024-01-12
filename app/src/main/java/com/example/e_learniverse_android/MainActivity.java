@@ -1,6 +1,5 @@
 package com.example.e_learniverse_android;
 
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,19 +9,18 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.e_learniverse_android.authorThirdPartyApiCall.AuthorActivity;
-import com.example.e_learniverse_android.custom_application.CustomApplication;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
+import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;
+import com.example.e_learniverse_android.notification.old_tutorial.OldNotificationTutorialActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.iid.FirebaseInstanceId;
-
-import androidx.core.app.NotificationCompat;
 
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonTriggerNotification, buttonCancel, buttonUpdate, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer;
+    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,46 +38,17 @@ public class MainActivity extends AppCompatActivity {
             Log.d("FCM-Token Not Found: ", e.toString());
         }
 
-        buttonTriggerNotification = (Button)findViewById(R.id.buttonTriggerNotification);
-        buttonCancel = (Button)findViewById(R.id.buttonCancel);
-        buttonUpdate = (Button)findViewById(R.id.buttonUpdate);
+        buttonOldNotificationTutorial = (Button)findViewById(R.id.oldNotificationTutorial);
+        buttonNewNotificationTutorial = (Button)findViewById(R.id.newNotificationTutorial);
         buttonRegisterUser = (Button)findViewById(R.id.registerUser);
         buttonTutorialLiveData = (Button)findViewById(R.id.tutorialLiveData);
         buttonCallAuthorApi = (Button)findViewById(R.id.callAuthorApi);
         buttonCountDownTimer = (Button)findViewById(R.id.countDownTimer);
 
-        buttonTriggerNotification.setOnClickListener(new View.OnClickListener() {
+        buttonOldNotificationTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((CustomApplication)getApplication()).triggerNotificationWithBackStack(NotificationDetailsActivity.class,
-                        getString(R.string.NEWS_CHANNEL_ID),
-                        "Sample Notification",
-                        "This is a sample notification app",
-                        "This is a sample notification created by Codetutor for demonstration of how to trigger notifications in Android app ",
-                        NotificationCompat.PRIORITY_HIGH,
-                        true,
-                        getResources().getInteger(R.integer.notificationId),
-                        PendingIntent.FLAG_UPDATE_CURRENT);
-            }
-        });
-
-        buttonCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((CustomApplication)getApplication()).cancelNotification(getResources().getInteger(R.integer.notificationId));
-            }
-        });
-
-        buttonUpdate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ((CustomApplication)getApplication()).updateNotification(NotificationDetailsActivity.class,
-                        "Updated Notification",
-                        "This is updatedNotification",
-                        getString(R.string.NEWS_CHANNEL_ID),
-                        getResources().getInteger(R.integer.notificationId),
-                        "This is a updated information for bigpicture String",
-                        PendingIntent.FLAG_UPDATE_CURRENT);
+                startActivity(new Intent(MainActivity.this, OldNotificationTutorialActivity.class));
             }
         });
 
@@ -108,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CountDownTimerActivity.class));
+            }
+        });
+
+        buttonNewNotificationTutorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, NewNotificationTutorialActivity.class));
             }
         });
 
