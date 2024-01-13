@@ -11,6 +11,7 @@ import android.view.View;
 import com.example.e_learniverse_android.author_third_party_api.AuthorActivity;
 import com.example.e_learniverse_android.background_service.MediaPlayerBackgroundActivity;
 import com.example.e_learniverse_android.broadcast_receiver.alarm_manager.AlarmManagerActivity;
+import com.example.e_learniverse_android.implicit_intent.ImplicitIntentActivity;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;
@@ -23,7 +24,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService, buttonBroadcastReceiver;
+    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService, buttonBroadcastReceiver, buttonImplicitIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         buttonCountDownTimer = (Button)findViewById(R.id.countDownTimer);
         buttonMusicService = (Button)findViewById(R.id.btnMusicService);
         buttonBroadcastReceiver = (Button)findViewById(R.id.btnBroadcastReceiver);
+        buttonImplicitIntent = (Button)findViewById(R.id.btnImplicitIntent);
 
         buttonOldNotificationTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,6 +105,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, AlarmManagerActivity.class));
+            }
+        });
+
+        buttonImplicitIntent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, ImplicitIntentActivity.class));
             }
         });
     }

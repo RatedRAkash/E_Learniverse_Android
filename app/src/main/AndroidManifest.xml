@@ -81,6 +81,9 @@
             android:name=".broadcast_receiver.alarm_manager.AlarmManagerActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".implicit_intent.ImplicitIntentActivity"
+            android:exported="false" />
 
         <!--  FirebaseFCM Service    -->
         <service
