@@ -8,6 +8,9 @@
 
     <uses-permission android:name="android.permission.SEND_SMS"/>
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:name=".custom_application.CustomApplication"
         android:allowBackup="true"
@@ -85,6 +88,10 @@
             android:name=".implicit_intent.ImplicitIntentActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".realtime_database.RealTimeDatabaseTutorialActivity"
+            android:exported="false" />
+
         <!--  FirebaseFCM Service    -->
         <service
             android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
@@ -93,6 +100,8 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+
 
         <!--  Music Service    -->
         <service android:name=".background_service.service.MusicService"/>

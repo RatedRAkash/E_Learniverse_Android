@@ -17,63 +17,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Old Notification Tutorial"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/newNotificationTutorial"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="New Notification Tutorial"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/registerUser"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register User"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/tutorialLiveData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="LiveData Tutorial"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/callAuthorApi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Call Author Api"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/countDownTimer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Count-Down Timer"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/btnMusicService"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go To Music Service"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/btnBroadcastReceiver"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go To AlarmManager/Broadcast Receiver"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
 
         <Button
             android:id="@+id/btnImplicitIntent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Implicit Intent Tutorial"
-            android:layout_margin="11dp"/>
+            android:layout_margin="6dp"/>
+
+        <Button
+            android:id="@+id/btnRealTimeDatabaseTutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RealTime Database Tutorial"
+            android:layout_margin="6dp"/>
 
     </LinearLayout>
 

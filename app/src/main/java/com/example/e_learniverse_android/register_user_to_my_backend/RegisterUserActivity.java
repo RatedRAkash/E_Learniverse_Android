@@ -21,12 +21,14 @@ import retrofit2.Response;
 public class RegisterUserActivity extends AppCompatActivity {
 
     EditText mobileEditText, nameEditText;
+    Button registerUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
 
-        Button registerUser = (Button)findViewById(R.id.registerButtonId);
+        registerUser = (Button)findViewById(R.id.registerButtonId);
         mobileEditText = (EditText)findViewById(R.id.mobileId);
         nameEditText = (EditText)findViewById(R.id.nameId);
 
@@ -63,7 +65,6 @@ public class RegisterUserActivity extends AppCompatActivity {
                         // Handle network or API call failure
                     }
                 });
-
 
             }
         });
