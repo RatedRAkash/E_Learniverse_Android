@@ -2,6 +2,7 @@ package com.example.e_learniverse_android.kotlin_code.basic_kotlin_code
 
 class Akash : Parent() {
 
+    // in Kotlin there is No Need for "new" keyword to create object
     companion object {
         @JvmStatic
         fun main(args: Array<String>) {
