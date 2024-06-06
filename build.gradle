@@ -8,6 +8,8 @@ buildscript {
     }
 
     dependencies {
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10'
+
 //        Firebase FCM Services Dependency
         classpath 'com.google.gms:google-services:4.3.15' // Replace with the latest version
     }
