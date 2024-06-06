@@ -12,6 +12,7 @@ import com.example.e_learniverse_android.author_third_party_api.AuthorActivity;
 import com.example.e_learniverse_android.background_service.MediaPlayerBackgroundActivity;
 import com.example.e_learniverse_android.broadcast_receiver.alarm_manager.AlarmManagerActivity;
 import com.example.e_learniverse_android.implicit_intent.ImplicitIntentActivity;
+import com.example.e_learniverse_android.kotlin_code.KotlinPracticeActivity;
 import com.example.e_learniverse_android.livedata_tutorial.countDownTimer.CountDownTimerActivity;
 import com.example.e_learniverse_android.livedata_tutorial.numberCounter.LiveDataTutorialActivity;
 import com.example.e_learniverse_android.notification.new_tutorial.NewNotificationTutorialActivity;
@@ -25,7 +26,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService, buttonBroadcastReceiver, buttonImplicitIntent, buttonRealTimeDatabase;
+    private Button buttonOldNotificationTutorial, buttonNewNotificationTutorial, buttonRegisterUser, buttonTutorialLiveData, buttonCallAuthorApi, buttonCountDownTimer, buttonMusicService, buttonBroadcastReceiver, buttonImplicitIntent, buttonRealTimeDatabase, buttonKotlinPracticeActivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         buttonBroadcastReceiver = (Button)findViewById(R.id.btnBroadcastReceiver);
         buttonImplicitIntent = (Button)findViewById(R.id.btnImplicitIntent);
         buttonRealTimeDatabase = (Button)findViewById(R.id.btnRealTimeDatabaseTutorial);
+        buttonKotlinPracticeActivity = (Button)findViewById(R.id.btnKotlinPracticeActivity);
 
         buttonOldNotificationTutorial.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +124,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RealTimeDatabaseTutorialActivity.class));
+            }
+        });
+
+        buttonKotlinPracticeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, KotlinPracticeActivity.class));
             }
         });
     }

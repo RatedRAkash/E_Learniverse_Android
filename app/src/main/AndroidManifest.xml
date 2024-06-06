@@ -92,6 +92,10 @@
             android:name=".realtime_database.RealTimeDatabaseTutorialActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".kotlin_code.KotlinPracticeActivity"
+            android:exported="false" />
+
         <!--  FirebaseFCM Service    -->
         <service
             android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
