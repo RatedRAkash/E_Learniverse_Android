@@ -8,6 +8,16 @@
 
 <!--  `Start/End` = Horizontal  -->
 <!--  `Top/Bottom` = Vertical  -->
+    <Button
+        android:id="@+id/btnKotlinRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kotlin Recycler View"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
     <EditText
         android:id="@+id/editText1"
         android:layout_width="wrap_content"

@@ -3,13 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.e_learniverse_android">
 
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-    <uses-permission android:name="android.permission.READ_SMS"/>
-
-    <uses-permission android:name="android.permission.SEND_SMS"/>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".custom_application.CustomApplication"
@@ -23,6 +21,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_Learniverse_Android"
         tools:targetApi="31">
+        <activity
+            android:name=".kotlin_code.KotlinRecyclerViewActivity"
+            android:exported="false" />
         <activity
             android:name=".livedata_tutorial.countDownTimer.CountDownTimerActivity"
             android:exported="false" />
@@ -59,7 +60,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".register_user_to_my_backend.RegisterUserActivity"
             android:exported="false" />
@@ -75,55 +75,39 @@
         <activity
             android:name=".notification.new_tutorial.CustomNotificationTutorialActivity"
             android:exported="false" />
-
         <activity
             android:name=".background_service.MediaPlayerBackgroundActivity"
             android:exported="false" />
-
         <activity
             android:name=".broadcast_receiver.alarm_manager.AlarmManagerActivity"
             android:exported="false" />
-
         <activity
             android:name=".implicit_intent.ImplicitIntentActivity"
             android:exported="false" />
-
         <activity
             android:name=".realtime_database.RealTimeDatabaseTutorialActivity"
             android:exported="false" />
-
         <activity
             android:name=".kotlin_code.KotlinPracticeActivity"
-            android:exported="false" />
-
-        <!--  FirebaseFCM Service    -->
+            android:exported="false" /> <!-- FirebaseFCM Service -->
         <service
             android:name=".firebase_and_notification_services.CustomFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
-        </service>
-
-
-
-        <!--  Music Service    -->
-        <service android:name=".background_service.service.MusicService"/>
-
-        <!-- Alarm Manager BroadcastReceiver   -->
-        <receiver android:name=".broadcast_receiver.alarm_manager.MyBroadcastReceiver"/>
-
-        <!-- SMS BroadcastReceiver   -->
-        <receiver android:name=".broadcast_receiver.universal_broadcast_receiver.SmsBroadcastReceiver"
-            android:permission="android.permission.BROADCAST_SMS"
-            android:exported="true">  <!--true : broadcast receiver can receive events sent by same or others applications-->
+        </service> <!-- Music Service -->
+        <service android:name=".background_service.service.MusicService" /> <!-- Alarm Manager BroadcastReceiver -->
+        <receiver android:name=".broadcast_receiver.alarm_manager.MyBroadcastReceiver" /> <!-- SMS BroadcastReceiver -->
+        <receiver
+            android:name=".broadcast_receiver.universal_broadcast_receiver.SmsBroadcastReceiver"
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS"> <!-- true : broadcast receiver can receive events sent by same or others applications -->
 
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
             </intent-filter>
-
         </receiver>
-
     </application>
 
 </manifest>

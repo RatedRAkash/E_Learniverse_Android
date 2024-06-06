@@ -1,11 +1,13 @@
 package com.example.e_learniverse_android.kotlin_code
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.e_learniverse_android.R
 import kotlinx.android.synthetic.main.activity_kotlin_practice.addButton
+import kotlinx.android.synthetic.main.activity_kotlin_practice.btnKotlinRecyclerView
 import kotlinx.android.synthetic.main.activity_kotlin_practice.deleteButton
 import kotlinx.android.synthetic.main.activity_kotlin_practice.deleteTextView
 import kotlinx.android.synthetic.main.activity_kotlin_practice.editText1
@@ -17,6 +19,12 @@ class KotlinPracticeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin_practice)
+
+        // "onClick" method's "View" is Now Referenced by "p" with "p->"... by default it is referenced with "it" in Kotlin
+        btnKotlinRecyclerView.setOnClickListener {p->
+            // "Intent Passing" in Kotlin
+            startActivity(Intent(this@KotlinPracticeActivity, KotlinRecyclerViewActivity::class.java))
+        }
 
         addButton.setOnClickListener(object: View.OnClickListener{
             override fun onClick(v: View?) {
@@ -34,7 +42,7 @@ class KotlinPracticeActivity : AppCompatActivity() {
                     ).show()
 
                     // Set Text in "Kotlin"
-                    sumTextView.text = "The sum is $sum"
+                    sumTextView.text = "${no1} + ${no2} = $sum"
                 }
             }
         })
@@ -54,8 +62,7 @@ class KotlinPracticeActivity : AppCompatActivity() {
                 ).show()
 
                 // Set Text in "Kotlin"
-                deleteTextView.text = "The Minus is $minus"
-
+                deleteTextView.text = "${no1} - ${no2} = $minus"
             }
         }
     }
